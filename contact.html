@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AinzApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo" style="height:48px;"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="weeklytodo.html">WeeklyTodo</a>
+                    <a href="tagnote.html">TagNote</a>
+                    <a href="contact.html" class="active">Contact</a>
+                    <a href="ko/index.html" class="lang-switch">한국어</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Get in touch with us for support, feedback, or any questions about our apps.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>ainzapp.com@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <div>
+                                <h3>Website</h3>
+                                <p>www.ainzapp.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h3>Response Time</h3>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form class="contact-form" action="https://formsubmit.co/ainzapp.com@gmail.com" method="POST">
+                            <div class="form-group">
+                                <label>
+                                    <span class="en">Name</span>
+                                    <span class="ko">이름</span>
+                                </label>
+                                <input type="text" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <span class="en">Email</span>
+                                    <span class="ko">이메일</span>
+                                </label>
+                                <input type="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <span class="en">Subject</span>
+                                    <span class="ko">제목</span>
+                                </label>
+                                <input type="text" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <span class="en">Message</span>
+                                    <span class="ko">내용</span>
+                                </label>
+                                <textarea name="message" rows="5" required></textarea>
+                            </div>
+
+                            <!-- 스팸 방지를 위한 허니팟 필드 -->
+                            <input type="text" name="_honey" style="display: none">
+                            
+                            <!-- 자동 응답 메일 비활성화 -->
+                            <input type="hidden" name="_autoresponse" value="감사합니다. 문의하신 내용은 검토 후 순차적으로 답변 드리도록 하겠습니다.">
+                            
+                            <!-- 제출 후 리다이렉트 페이지 -->
+                            <input type="hidden" name="_next" value="https://ainzapp.com/thank-you.html">
+
+                            <button type="submit" class="btn btn-primary">
+                                <span class="en">Send Message</span>
+                                <span class="ko">메시지 보내기</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I download your apps?</h3>
+                        <p>Our apps are available on major app stores. You can find download links on each app's dedicated page.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer customer support?</h3>
+                        <p>Yes, we provide comprehensive customer support through email and our help center.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Are your apps free?</h3>
+                        <p>We offer both free and premium versions of our apps with different feature sets.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I sync data across devices?</h3>
+                        <p>Yes, both WeeklyTodo and TagNote support cloud synchronization across all your devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AinzApp</h3>
+                    <p>Making productivity simple and effective</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Apps</h4>
+                    <ul>
+                        <li><a href="weeklytodo.html">WeeklyTodo</a></li>
+                        <li><a href="tagnote.html">TagNote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AinzApp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
