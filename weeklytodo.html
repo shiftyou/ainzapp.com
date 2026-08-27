@@ -12,12 +12,14 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo" style="height:48px;"></a>
+                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo"><span>AinzApp</span></a>
                 </div>
+                <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="weeklytodo.html" class="active">WeeklyTodo</a>
                     <a href="tagnote.html">TagNote</a>
+                    <a href="asknote.html">AskNote</a>
                     <a href="contact.html">Contact</a>
                     <a href="ko/weeklytodo.html" class="lang-switch">한국어</a>
                 </div>
@@ -30,30 +32,70 @@
             <div class="container">
                 <div class="app-hero-content">
                     <div class="app-hero-text">
+                        <img class="app-hero-icon" src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="WeeklyTodo App Icon">
                         <h1>WeeklyTodo</h1>
                         <p class="app-subtitle">Organize your life with a weekly perspective</p>
                         <p>WeeklyTodo helps you plan, track, and complete your tasks with an intuitive weekly view. Perfect for students, professionals, and anyone who wants to stay organized.</p>
                         <div class="app-buttons">
                             <a href="https://apps.apple.com/kr/app/id6677052934" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS</a>
                             <a href="https://apps.apple.com/kr/app/weeklytodo-for-desktop/id6736765711" class="btn btn-secondary" target="_blank" rel="noopener">Download for macOS</a>
-                            <a href="#features" class="btn btn-outline">Learn More</a>
+                            <a href="#features" class="btn btn-outline">Learn more</a>
                         </div>
                     </div>
                     <div class="app-hero-image">
-                        <img src="images/WeeklyTodo_icon.png" alt="WeeklyTodo App Icon">
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo2.png" alt="WeeklyTodo app screenshot">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="app-features">
+        <section id="features" class="section">
             <div class="container">
-                <h2>Key Features</h2>
-                <div class="features-grid">
+
+                <div class="highlight-row reveal">
+                    <div class="highlight-media">
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo weekly view">
+                    </div>
+                    <div class="highlight-text">
+                        <h3>See your whole week at a glance</h3>
+                        <p>An intuitive weekly calendar interface lays out every task and event, so you always know what's next without digging through lists.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-row reverse reveal">
+                    <div class="highlight-media">
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo3.png" alt="WeeklyTodo task management">
+                    </div>
+                    <div class="highlight-text">
+                        <h3>Task management that keeps up with you</h3>
+                        <p>Create, edit, and prioritize tasks with due dates. Overdue items surface automatically so nothing slips through the cracks.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-row reveal">
+                    <div class="highlight-media">
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo4.png" alt="WeeklyTodo widgets">
+                    </div>
+                    <div class="highlight-text">
+                        <h3>Widgets, sync, and quick notes</h3>
+                        <p>Add widgets to your home screen for one-glance access, jot quick notes alongside your tasks, and stay in sync across every device.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-gray">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Key Features</span>
+                    <h2>Everything you need to plan your week</h2>
+                </div>
+                <div class="features-grid reveal">
                     <div class="feature">
                         <div class="feature-icon">📅</div>
                         <h3>Weekly View</h3>
-                        <p>See your entire week at a glance with our intuitive weekly calendar interface</p>
+                        <p>See your entire week at a glance with an intuitive weekly calendar interface</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">✅</div>
@@ -94,28 +136,18 @@
             </div>
         </section>
 
-        <section class="app-screenshots">
+        <section class="section">
             <div class="container">
-                <h2>iOS Screenshots</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot">
-                        <img src="images/WeeklyTodo1.png" alt="WeeklyTodo iOS Screenshot 1">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/WeeklyTodo2.png" alt="WeeklyTodo iOS Screenshot 2">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/WeeklyTodo3.png" alt="WeeklyTodo iOS Screenshot 3">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/WeeklyTodo4.png" alt="WeeklyTodo iOS Screenshot 4">
-                    </div>
+                <div class="section-head reveal">
+                    <span class="eyebrow">Gallery</span>
+                    <h2>WeeklyTodo on iOS &amp; macOS</h2>
                 </div>
-                <h2 style="margin-top:3rem;">macOS Screenshots</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot">
-                        <img src="images/WeeklyTodoDesk1.png" alt="WeeklyTodo macOS Screenshot 1">
-                    </div>
+                <div class="gallery-scroll reveal">
+                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo iOS Screenshot 1"></div>
+                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo2.png" alt="WeeklyTodo iOS Screenshot 2"></div>
+                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo3.png" alt="WeeklyTodo iOS Screenshot 3"></div>
+                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo4.png" alt="WeeklyTodo iOS Screenshot 4"></div>
+                    <div class="shot wide"><img src="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" alt="WeeklyTodo macOS Screenshot"></div>
                 </div>
             </div>
         </section>
@@ -123,10 +155,12 @@
         <section class="app-cta">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Ready to Get Organized?</h2>
-                    <p>Start using WeeklyTodo today and transform how you manage your tasks</p>
-                    <a href="https://apps.apple.com/kr/app/id6677052934" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS</a>
-                    <a href="https://apps.apple.com/kr/app/weeklytodo-for-desktop/id6736765711" class="btn btn-secondary" target="_blank" rel="noopener">Download for macOS</a>
+                    <h2>Ready to get organized?</h2>
+                    <p>Start using WeeklyTodo today and transform how you manage your tasks.</p>
+                    <div class="btn-row">
+                        <a href="https://apps.apple.com/kr/app/id6677052934" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS</a>
+                        <a href="https://apps.apple.com/kr/app/weeklytodo-for-desktop/id6736765711" class="btn btn-light" target="_blank" rel="noopener">Download for macOS</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,13 +171,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>AinzApp</h3>
-                    <p>Making productivity simple and effective</p>
+                    <p>Making productivity simple and effective.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Apps</h4>
                     <ul>
                         <li><a href="weeklytodo.html">WeeklyTodo</a></li>
                         <li><a href="tagnote.html">TagNote</a></li>
+                        <li><a href="asknote.html">AskNote</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -156,9 +191,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AinzApp. All rights reserved.</p>
+                <p>&copy; 2026 AinzApp. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
-</html> 
+</html>

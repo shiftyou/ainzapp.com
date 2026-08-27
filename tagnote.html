@@ -12,12 +12,14 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo" style="height:48px;"></a>
+                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo"><span>AinzApp</span></a>
                 </div>
+                <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="weeklytodo.html">WeeklyTodo</a>
                     <a href="tagnote.html" class="active">TagNote</a>
+                    <a href="asknote.html">AskNote</a>
                     <a href="contact.html">Contact</a>
                     <a href="ko/tagnote.html" class="lang-switch">한국어</a>
                 </div>
@@ -30,25 +32,65 @@
             <div class="container">
                 <div class="app-hero-content">
                     <div class="app-hero-text">
+                        <img class="app-hero-icon" src="images/TagNote/TagNote_icon.png" alt="TagNote App Icon">
                         <h1>TagNote</h1>
                         <p class="app-subtitle">Organize your thoughts with powerful tagging</p>
                         <p>TagNote is the ultimate note-taking app that helps you capture, organize, and find your ideas instantly with an intelligent tagging system. Perfect for students, researchers, and creative professionals.</p>
                         <div class="app-buttons">
-                            <a href="https://apps.apple.com/kr/app/tagnote-%EB%A9%80%ED%8B%B0%ED%83%9C%EA%B7%B8-%EB%85%B8%ED%8A%B8/id6747192758" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS & macOS</a>
-                            <a href="#features" class="btn btn-outline">Learn More</a>
+                            <a href="https://apps.apple.com/kr/app/tagnote-%EB%A9%80%ED%8B%B0%ED%83%9C%EA%B7%B8-%EB%85%B8%ED%8A%B8/id6747192758" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS &amp; macOS</a>
+                            <a href="#features" class="btn btn-outline">Learn more</a>
                         </div>
                     </div>
                     <div class="app-hero-image">
-                        <img src="images/TagNote_icon.png" alt="TagNote App Icon">
+                        <img src="images/TagNote/iOS/TagNote_ios1.png" alt="TagNote app screenshot">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="app-features">
+        <section id="features" class="section">
             <div class="container">
-                <h2>Key Features</h2>
-                <div class="features-grid">
+
+                <div class="highlight-row reveal">
+                    <div class="highlight-media">
+                        <img src="images/TagNote/iOS/TagNote_ios2.png" alt="TagNote smart tagging">
+                    </div>
+                    <div class="highlight-text">
+                        <h3>Smart tagging, instant recall</h3>
+                        <p>Organize notes with custom tags and find exactly what you need with powerful search — no more scrolling through endless folders.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-row reverse reveal">
+                    <div class="highlight-media">
+                        <img src="images/TagNote/iOS/TagNote_ios3.png" alt="TagNote rich text editor">
+                    </div>
+                    <div class="highlight-text">
+                        <h3>A rich text editor built for ideas</h3>
+                        <p>Format your notes, add images, and mix in multimedia to create notes that are as expressive as your thinking.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-row reveal">
+                    <div class="highlight-media">
+                        <img src="images/TagNote/iOS/TagNote_ios4.png" alt="TagNote folder organization">
+                    </div>
+                    <div class="highlight-text">
+                        <h3>Folders, sync, structure</h3>
+                        <p>Group notes into folders and subfolders, then access everything from any device with automatic cloud synchronization.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-gray">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Key Features</span>
+                    <h2>Everything you need to capture ideas</h2>
+                </div>
+                <div class="features-grid reveal">
                     <div class="feature">
                         <div class="feature-icon">🏷️</div>
                         <h3>Smart Tagging</h3>
@@ -73,34 +115,20 @@
             </div>
         </section>
 
-        <section class="app-screenshots">
+        <section class="section">
             <div class="container">
-                <h2>iOS Screenshots</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot">
-                        <img src="images/TagNote_ios1.png" alt="TagNote iOS Screenshot 1">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/TagNote_ios2.png" alt="TagNote iOS Screenshot 2">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/TagNote_ios3.png" alt="TagNote iOS Screenshot 3">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/TagNote_ios4.png" alt="TagNote iOS Screenshot 4">
-                    </div>
+                <div class="section-head reveal">
+                    <span class="eyebrow">Gallery</span>
+                    <h2>TagNote on iOS &amp; macOS</h2>
                 </div>
-                <h2 style="margin-top:3rem;">macOS Screenshots</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot">
-                        <img src="images/TagNote1.png" alt="TagNote macOS Screenshot 1">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/TagNote2.png" alt="TagNote macOS Screenshot 2">
-                    </div>
-                    <div class="screenshot">
-                        <img src="images/TagNote3.png" alt="TagNote macOS Screenshot 3">
-                    </div>
+                <div class="gallery-scroll reveal">
+                    <div class="shot"><img src="images/TagNote/iOS/TagNote_ios1.png" alt="TagNote iOS Screenshot 1"></div>
+                    <div class="shot"><img src="images/TagNote/iOS/TagNote_ios2.png" alt="TagNote iOS Screenshot 2"></div>
+                    <div class="shot"><img src="images/TagNote/iOS/TagNote_ios3.png" alt="TagNote iOS Screenshot 3"></div>
+                    <div class="shot"><img src="images/TagNote/iOS/TagNote_ios4.png" alt="TagNote iOS Screenshot 4"></div>
+                    <div class="shot wide"><img src="images/TagNote/macOS/TagNote1.png" alt="TagNote macOS Screenshot 1"></div>
+                    <div class="shot wide"><img src="images/TagNote/macOS/TagNote2.png" alt="TagNote macOS Screenshot 2"></div>
+                    <div class="shot wide"><img src="images/TagNote/macOS/TagNote3.png" alt="TagNote macOS Screenshot 3"></div>
                 </div>
             </div>
         </section>
@@ -108,9 +136,9 @@
         <section class="app-cta">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Start Organizing Your Ideas</h2>
-                    <p>Download TagNote today and transform how you capture and organize your thoughts</p>
-                    <a href="https://apps.apple.com/kr/app/tagnote-%EB%A9%80%ED%8B%B0%ED%83%9C%EA%B7%B8-%EB%85%B8%ED%8A%B8/id6747192758" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS & macOS</a>
+                    <h2>Start organizing your ideas</h2>
+                    <p>Download TagNote today and transform how you capture and organize your thoughts.</p>
+                    <a href="https://apps.apple.com/kr/app/tagnote-%EB%A9%80%ED%8B%B0%ED%83%9C%EA%B7%B8-%EB%85%B8%ED%8A%B8/id6747192758" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS &amp; macOS</a>
                 </div>
             </div>
         </section>
@@ -121,13 +149,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>AinzApp</h3>
-                    <p>Making productivity simple and effective</p>
+                    <p>Making productivity simple and effective.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Apps</h4>
                     <ul>
                         <li><a href="weeklytodo.html">WeeklyTodo</a></li>
                         <li><a href="tagnote.html">TagNote</a></li>
+                        <li><a href="asknote.html">AskNote</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -140,9 +169,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AinzApp. All rights reserved.</p>
+                <p>&copy; 2026 AinzApp. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
-</html> 
+</html>

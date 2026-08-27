@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AinzApp - WeeklyTodo & TagNote</title>
+    <title>AinzApp — WeeklyTodo, TagNote & AskNote</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,12 +12,14 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo" style="height:48px;"></a>
+                    <a href="index.html"><img src="images/ainzapp-crop.jpg" alt="AinzApp Logo"><span>AinzApp</span></a>
                 </div>
+                <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
                 <div class="nav-links">
                     <a href="index.html" class="active">Home</a>
                     <a href="weeklytodo.html">WeeklyTodo</a>
                     <a href="tagnote.html">TagNote</a>
+                    <a href="asknote.html">AskNote</a>
                     <a href="contact.html">Contact</a>
                     <a href="ko/index.html" class="lang-switch">한국어</a>
                 </div>
@@ -27,63 +29,87 @@
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to AinzApp</h1>
-                <p>Discover our innovative productivity apps designed to enhance your daily workflow</p>
-                <div class="hero-buttons">
-                    <a href="weeklytodo.html" class="btn btn-primary">WeeklyTodo</a>
-                    <a href="tagnote.html" class="btn btn-secondary">TagNote</a>
+            <div class="container hero-content">
+                <h1>Productivity apps, thoughtfully made.</h1>
+                <p>Three focused apps for planning your week, capturing your notes, and thinking alongside AI — all designed to feel effortless.</p>
+                <div class="hero-buttons btn-row">
+                    <a href="weeklytodo.html" class="btn btn-primary">Explore WeeklyTodo</a>
+                    <a href="tagnote.html" class="btn btn-outline">Explore TagNote</a>
                 </div>
             </div>
         </section>
 
-        <section class="apps">
+        <section class="section">
             <div class="container">
-                <h2>Our Apps</h2>
-                <div class="app-grid">
-                    <div class="app-card">
-                        <div class="app-icon">
-                            <img src="images/WeeklyTodo_icon.png" alt="WeeklyTodo Icon">
-                        </div>
+
+                <div class="showcase-row reveal">
+                    <div class="showcase-media">
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo weekly planner screenshot">
+                    </div>
+                    <div class="showcase-text">
+                        <img class="showcase-icon" src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="WeeklyTodo icon">
                         <h3>WeeklyTodo</h3>
-                        <p>Organize your tasks with a weekly view. Perfect for planning and tracking your productivity goals.</p>
-                        <a href="weeklytodo.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                    <div class="app-card">
-                        <div class="app-icon">
-                            <img src="images/TagNote_icon.png" alt="TagNote Icon">
-                        </div>
-                        <h3>TagNote</h3>
-                        <p>Create and organize notes with powerful tagging system. Find what you need instantly.</p>
-                        <a href="tagnote.html" class="btn btn-outline">Learn More</a>
+                        <p>Organize your life with a weekly perspective. Plan tasks, manage schedules, and never miss a deadline — with widgets and sync built in.</p>
+                        <a href="weeklytodo.html" class="btn btn-outline">Learn more</a>
                     </div>
                 </div>
+
+                <div class="showcase-row reverse reveal">
+                    <div class="showcase-media">
+                        <img src="images/TagNote/iOS/TagNote_ios1.png" alt="TagNote tagging screenshot">
+                    </div>
+                    <div class="showcase-text">
+                        <img class="showcase-icon" src="images/TagNote/TagNote_icon.png" alt="TagNote icon">
+                        <h3>TagNote</h3>
+                        <p>Capture and organize your notes with a powerful tagging system. Rich text, folders, and cloud sync make every idea easy to find again.</p>
+                        <a href="tagnote.html" class="btn btn-outline">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="showcase-row reveal">
+                    <div class="showcase-media">
+                        <img src="images/AskNote/web/asknote-iphone-en-1.png" alt="AskNote AI notes screenshot">
+                    </div>
+                    <div class="showcase-text">
+                        <div class="showcase-icon placeholder">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"></path><path d="M12 2v10l7 3"></path></svg>
+                        </div>
+                        <h3>AskNote <span class="status-pill" style="color:var(--gray-500);background:var(--gray-100);">Coming soon</span></h3>
+                        <p>Ask AI about your own notes. Record meetings and lectures, auto-summarize with on-device AI, and chat with your notes — fully offline and private.</p>
+                        <a href="asknote.html" class="btn btn-outline">Learn more</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section class="features">
+        <section class="section section-dark">
             <div class="container">
-                <h2>Why Choose AinzApp?</h2>
-                <div class="features-grid">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Why AinzApp</span>
+                    <h2>Built to get out of your way</h2>
+                    <p>Every app is designed around one idea: help you think and act faster, without the clutter.</p>
+                </div>
+                <div class="features-grid reveal">
                     <div class="feature">
                         <div class="feature-icon">📱</div>
-                        <h3>Cross-Platform</h3>
-                        <p>Access your data seamlessly across all your devices</p>
+                        <h3>Cross-platform</h3>
+                        <p>Access your data seamlessly across iPhone, iPad, and Mac.</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">🔒</div>
-                        <h3>Secure</h3>
-                        <p>Your data is protected with industry-standard security</p>
+                        <h3>Private by design</h3>
+                        <p>Your data stays yours, protected with industry-standard security.</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">⚡</div>
-                        <h3>Fast & Efficient</h3>
-                        <p>Optimized for speed and minimal resource usage</p>
+                        <h3>Fast &amp; efficient</h3>
+                        <p>Optimized for speed and minimal resource usage on every device.</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">🎨</div>
-                        <h3>Beautiful UI</h3>
-                        <p>Modern and intuitive interface design</p>
+                        <h3>Beautifully simple</h3>
+                        <p>A modern, intuitive interface that stays out of your way.</p>
                     </div>
                 </div>
             </div>
@@ -95,13 +121,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>AinzApp</h3>
-                    <p>Making productivity simple and effective</p>
+                    <p>Making productivity simple and effective.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Apps</h4>
                     <ul>
                         <li><a href="weeklytodo.html">WeeklyTodo</a></li>
                         <li><a href="tagnote.html">TagNote</a></li>
+                        <li><a href="asknote.html">AskNote</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -114,9 +141,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AinzApp. All rights reserved.</p>
+                <p>&copy; 2026 AinzApp. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
-</html> 
+</html>
