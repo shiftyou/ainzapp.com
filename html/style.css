@@ -273,6 +273,7 @@ nav { padding: 0; }
     position: relative;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     height: 340px;
     padding: 2rem;
     overflow: hidden;
