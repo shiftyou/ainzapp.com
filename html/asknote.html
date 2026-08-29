@@ -45,8 +45,12 @@
                             <a href="#features" class="btn btn-outline">Learn more</a>
                         </div>
                     </div>
-                    <div class="app-hero-image">
-                        <img src="images/AskNote/web/asknote-iphone-en-2.png" alt="AskNote AI Note screenshot">
+                    <div class="app-hero-image" data-platform-switch>
+                        <img src="images/AskNote/web/asknote-macos-en-1.png" alt="AskNote macOS screenshot" data-ios="images/AskNote/web/asknote-iphone-en-2.png" data-ios-alt="AskNote iPhone screenshot" data-macos="images/AskNote/web/asknote-macos-en-1.png" data-macos-alt="AskNote macOS screenshot">
+                        <div class="platform-toggle">
+                            <button type="button" class="platform-toggle-btn" data-platform="ios">iPhone</button>
+                            <button type="button" class="platform-toggle-btn active" data-platform="macos">Mac</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,21 +147,40 @@
             <div class="container">
                 <div class="section-head reveal">
                     <span class="eyebrow">Gallery</span>
-                    <h2>AskNote on iPhone, iPad &amp; Mac</h2>
+                    <h2>AskNote on Mac, iPhone &amp; iPad</h2>
                 </div>
-                <div class="gallery-scroll reveal">
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-1.png" alt="AskNote iPhone Screenshot 1"></div>
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-2.png" alt="AskNote iPhone Screenshot 2"></div>
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-3.png" alt="AskNote iPhone Screenshot 3"></div>
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-4.png" alt="AskNote iPhone Screenshot 4"></div>
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-5.png" alt="AskNote iPhone Screenshot 5"></div>
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-6.png" alt="AskNote iPhone Screenshot 6"></div>
-                    <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-7.png" alt="AskNote iPhone Screenshot 7"></div>
-                    <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-1.png" alt="AskNote iPad Screenshot 1"></div>
-                    <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-2.png" alt="AskNote iPad Screenshot 2"></div>
-                    <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-3.png" alt="AskNote iPad Screenshot 3"></div>
-                    <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-1.png" alt="AskNote macOS Screenshot 1"></div>
-                    <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-2.png" alt="AskNote macOS Screenshot 2"></div>
+                <div class="reveal" data-gallery>
+                    <div class="gallery-tabs">
+                        <button type="button" class="gallery-tab active" data-target="gallery-asknote-macos">macOS</button>
+                        <button type="button" class="gallery-tab" data-target="gallery-asknote-ios">iPhone &amp; iPad</button>
+                    </div>
+                    <div id="gallery-asknote-macos" class="gallery-panel active">
+                        <div class="gallery-scroll">
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-1.png" alt="AskNote macOS Screenshot 1"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-2.png" alt="AskNote macOS Screenshot 2"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-3.png" alt="AskNote macOS Screenshot 3"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-4.png" alt="AskNote macOS Screenshot 4"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-macos-en-5.png" alt="AskNote macOS Screenshot 5"></div>
+                        </div>
+                    </div>
+                    <div id="gallery-asknote-ios" class="gallery-panel">
+                        <div class="gallery-scroll">
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-1.png" alt="AskNote iPhone Screenshot 1"></div>
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-2.png" alt="AskNote iPhone Screenshot 2"></div>
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-3.png" alt="AskNote iPhone Screenshot 3"></div>
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-4.png" alt="AskNote iPhone Screenshot 4"></div>
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-5.png" alt="AskNote iPhone Screenshot 5"></div>
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-6.png" alt="AskNote iPhone Screenshot 6"></div>
+                            <div class="shot"><img src="images/AskNote/web/asknote-iphone-en-7.png" alt="AskNote iPhone Screenshot 7"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-1.png" alt="AskNote iPad Screenshot 1"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-2.png" alt="AskNote iPad Screenshot 2"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-3.png" alt="AskNote iPad Screenshot 3"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-4.png" alt="AskNote iPad Screenshot 4"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-5.png" alt="AskNote iPad Screenshot 5"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-6.png" alt="AskNote iPad Screenshot 6"></div>
+                            <div class="shot wide"><img src="images/AskNote/web/asknote-ipad-en-7.png" alt="AskNote iPad Screenshot 7"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -43,8 +43,12 @@
             <div class="container">
 
                 <div class="showcase-row reveal">
-                    <div class="showcase-media">
-                        <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo weekly planner screenshot">
+                    <div class="showcase-media" data-platform-switch>
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo iPhone screenshot" data-ios="images/WeeklyTodo/iOS/WeeklyTodo1.png" data-ios-alt="WeeklyTodo iPhone screenshot" data-macos="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" data-macos-alt="WeeklyTodo macOS screenshot">
+                        <div class="platform-toggle">
+                            <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
+                            <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
+                        </div>
                     </div>
                     <div class="showcase-text">
                         <img class="showcase-icon" src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="WeeklyTodo icon">
@@ -55,8 +59,12 @@
                 </div>
 
                 <div class="showcase-row reverse reveal">
-                    <div class="showcase-media">
-                        <img src="images/TagNote/iOS/TagNote_ios1.png" alt="TagNote tagging screenshot">
+                    <div class="showcase-media" data-platform-switch>
+                        <img src="images/TagNote/iOS/TagNote_ios1.png" alt="TagNote iPhone screenshot" data-ios="images/TagNote/iOS/TagNote_ios1.png" data-ios-alt="TagNote iPhone screenshot" data-macos="images/TagNote/macOS/TagNote1.png" data-macos-alt="TagNote macOS screenshot">
+                        <div class="platform-toggle">
+                            <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
+                            <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
+                        </div>
                     </div>
                     <div class="showcase-text">
                         <img class="showcase-icon" src="images/TagNote/TagNote_icon.png" alt="TagNote icon">
@@ -67,15 +75,19 @@
                 </div>
 
                 <div class="showcase-row reveal">
-                    <div class="showcase-media">
-                        <img src="images/AskNote/web/asknote-iphone-en-1.png" alt="AskNote AI notes screenshot">
+                    <div class="showcase-media" data-platform-switch>
+                        <img src="images/AskNote/web/asknote-macos-en-1.png" alt="AskNote macOS screenshot" data-ios="images/AskNote/web/asknote-iphone-en-1.png" data-ios-alt="AskNote iPhone screenshot" data-macos="images/AskNote/web/asknote-macos-en-1.png" data-macos-alt="AskNote macOS screenshot">
+                        <div class="platform-toggle">
+                            <button type="button" class="platform-toggle-btn" data-platform="ios">iPhone</button>
+                            <button type="button" class="platform-toggle-btn active" data-platform="macos">Mac</button>
+                        </div>
                     </div>
                     <div class="showcase-text">
                         <div class="showcase-icon placeholder">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"></path><path d="M12 2v10l7 3"></path></svg>
                         </div>
                         <h3>AskNote <span class="status-pill" style="color:var(--gray-500);background:var(--gray-100);">iOS coming soon</span></h3>
-                        <p>Ask AI about your own notes. Record meetings and lectures, auto-summarize with on-device AI, and chat with your notes — fully offline and private.</p>
+                        <p>Ask AI about your own notes. Record meetings and lectures, auto-summarize with on-device AI, and chat with your notes — fully offline and private. Available now on Mac.</p>
                         <a href="asknote.html" class="btn btn-outline">Learn more</a>
                     </div>
                 </div>

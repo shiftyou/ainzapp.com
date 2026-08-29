@@ -37,4 +37,24 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    var switches = document.querySelectorAll('[data-platform-switch]');
+    switches.forEach(function (el) {
+        var img = el.querySelector('img');
+        var buttons = el.querySelectorAll('.platform-toggle-btn');
+        if (!img || !buttons.length) return;
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                buttons.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                var platform = btn.dataset.platform;
+                if (img.dataset[platform]) {
+                    img.src = img.dataset[platform];
+                }
+                if (img.dataset[platform + 'Alt']) {
+                    img.alt = img.dataset[platform + 'Alt'];
+                }
+            });
+        });
+    });
 });

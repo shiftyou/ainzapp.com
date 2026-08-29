@@ -41,8 +41,12 @@
                             <a href="#features" class="btn btn-outline">자세히 보기</a>
                         </div>
                     </div>
-                    <div class="app-hero-image">
-                        <img src="../images/TagNote/iOS/TagNote_ios1.png" alt="TagNote 앱 스크린샷">
+                    <div class="app-hero-image" data-platform-switch>
+                        <img src="../images/TagNote/iOS/TagNote_ios1.png" alt="TagNote iPhone 스크린샷" data-ios="../images/TagNote/iOS/TagNote_ios1.png" data-ios-alt="TagNote iPhone 스크린샷" data-macos="../images/TagNote/macOS/TagNote1.png" data-macos-alt="TagNote macOS 스크린샷">
+                        <div class="platform-toggle">
+                            <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
+                            <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,14 +125,26 @@
                     <span class="eyebrow">갤러리</span>
                     <h2>iOS &amp; macOS의 TagNote</h2>
                 </div>
-                <div class="gallery-scroll reveal">
-                    <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios1.png" alt="TagNote iOS 스크린샷 1"></div>
-                    <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios2.png" alt="TagNote iOS 스크린샷 2"></div>
-                    <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios3.png" alt="TagNote iOS 스크린샷 3"></div>
-                    <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios4.png" alt="TagNote iOS 스크린샷 4"></div>
-                    <div class="shot wide"><img src="../images/TagNote/macOS/TagNote1.png" alt="TagNote macOS 스크린샷 1"></div>
-                    <div class="shot wide"><img src="../images/TagNote/macOS/TagNote2.png" alt="TagNote macOS 스크린샷 2"></div>
-                    <div class="shot wide"><img src="../images/TagNote/macOS/TagNote3.png" alt="TagNote macOS 스크린샷 3"></div>
+                <div class="reveal" data-gallery>
+                    <div class="gallery-tabs">
+                        <button type="button" class="gallery-tab active" data-target="gallery-tagnote-ios">iOS</button>
+                        <button type="button" class="gallery-tab" data-target="gallery-tagnote-macos">macOS</button>
+                    </div>
+                    <div id="gallery-tagnote-ios" class="gallery-panel active">
+                        <div class="gallery-scroll">
+                            <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios1.png" alt="TagNote iOS 스크린샷 1"></div>
+                            <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios2.png" alt="TagNote iOS 스크린샷 2"></div>
+                            <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios3.png" alt="TagNote iOS 스크린샷 3"></div>
+                            <div class="shot"><img src="../images/TagNote/iOS/TagNote_ios4.png" alt="TagNote iOS 스크린샷 4"></div>
+                        </div>
+                    </div>
+                    <div id="gallery-tagnote-macos" class="gallery-panel">
+                        <div class="gallery-scroll">
+                            <div class="shot wide"><img src="../images/TagNote/macOS/TagNote1.png" alt="TagNote macOS 스크린샷 1"></div>
+                            <div class="shot wide"><img src="../images/TagNote/macOS/TagNote2.png" alt="TagNote macOS 스크린샷 2"></div>
+                            <div class="shot wide"><img src="../images/TagNote/macOS/TagNote3.png" alt="TagNote macOS 스크린샷 3"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

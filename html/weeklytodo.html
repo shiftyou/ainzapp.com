@@ -42,8 +42,12 @@
                             <a href="#features" class="btn btn-outline">Learn more</a>
                         </div>
                     </div>
-                    <div class="app-hero-image">
-                        <img src="images/WeeklyTodo/iOS/WeeklyTodo2.png" alt="WeeklyTodo app screenshot">
+                    <div class="app-hero-image" data-platform-switch>
+                        <img src="images/WeeklyTodo/iOS/WeeklyTodo2.png" alt="WeeklyTodo iPhone screenshot" data-ios="images/WeeklyTodo/iOS/WeeklyTodo2.png" data-ios-alt="WeeklyTodo iPhone screenshot" data-macos="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" data-macos-alt="WeeklyTodo macOS screenshot">
+                        <div class="platform-toggle">
+                            <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
+                            <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,12 +146,24 @@
                     <span class="eyebrow">Gallery</span>
                     <h2>WeeklyTodo on iOS &amp; macOS</h2>
                 </div>
-                <div class="gallery-scroll reveal">
-                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo iOS Screenshot 1"></div>
-                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo2.png" alt="WeeklyTodo iOS Screenshot 2"></div>
-                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo3.png" alt="WeeklyTodo iOS Screenshot 3"></div>
-                    <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo4.png" alt="WeeklyTodo iOS Screenshot 4"></div>
-                    <div class="shot wide"><img src="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" alt="WeeklyTodo macOS Screenshot"></div>
+                <div class="reveal" data-gallery>
+                    <div class="gallery-tabs">
+                        <button type="button" class="gallery-tab active" data-target="gallery-weeklytodo-ios">iOS</button>
+                        <button type="button" class="gallery-tab" data-target="gallery-weeklytodo-macos">macOS</button>
+                    </div>
+                    <div id="gallery-weeklytodo-ios" class="gallery-panel active">
+                        <div class="gallery-scroll">
+                            <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo iOS Screenshot 1"></div>
+                            <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo2.png" alt="WeeklyTodo iOS Screenshot 2"></div>
+                            <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo3.png" alt="WeeklyTodo iOS Screenshot 3"></div>
+                            <div class="shot"><img src="images/WeeklyTodo/iOS/WeeklyTodo4.png" alt="WeeklyTodo iOS Screenshot 4"></div>
+                        </div>
+                    </div>
+                    <div id="gallery-weeklytodo-macos" class="gallery-panel">
+                        <div class="gallery-scroll">
+                            <div class="shot wide"><img src="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" alt="WeeklyTodo macOS Screenshot"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

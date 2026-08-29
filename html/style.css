@@ -9,18 +9,18 @@
 }
 
 :root {
-    --black: #1d1d1f;
+    --black: #0b1220;
     --white: #ffffff;
-    --gray-50: #f5f5f7;
-    --gray-100: #e8e8ed;
-    --gray-300: #d2d2d7;
-    --gray-500: #86868b;
-    --gray-700: #424245;
-    --blue: #0071e3;
-    --blue-dark: #0058b0;
-    --radius-lg: 28px;
-    --radius-md: 18px;
-    --radius-sm: 12px;
+    --gray-50: #f4f6f9;
+    --gray-100: #e4e8ef;
+    --gray-300: #c4cbd6;
+    --gray-500: #667085;
+    --gray-700: #344054;
+    --blue: #1f3a5f;
+    --blue-dark: #142943;
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
     --ease: cubic-bezier(0.28, 0.11, 0.32, 1);
 }
 
@@ -134,10 +134,11 @@ nav { padding: 0; }
 .btn {
     display: inline-block;
     padding: 0.7rem 1.8rem;
-    border-radius: 980px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.98rem;
+    letter-spacing: -0.01em;
     transition: all 0.25s var(--ease);
     border: 1.5px solid transparent;
     cursor: pointer;
@@ -281,7 +282,7 @@ nav { padding: 0; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #6d3bd1, #b83b8f);
+    background: linear-gradient(135deg, #1f3a5f, #3b6ea5);
     color: white;
 }
 
@@ -312,6 +313,45 @@ nav { padding: 0; }
     align-items: center;
     justify-content: center;
 }
+
+/* ==========================================================================
+   Platform toggle (iOS / macOS screenshot switcher)
+   ========================================================================== */
+
+[data-platform-switch] { position: relative; }
+
+.platform-toggle {
+    position: absolute;
+    left: 50%;
+    bottom: 1.1rem;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: inline-flex;
+    gap: 0.2rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 999px;
+    padding: 0.25rem;
+    box-shadow: 0 12px 30px -10px rgba(0,0,0,0.35);
+}
+
+.platform-toggle-btn {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    color: var(--gray-700);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s var(--ease);
+}
+.platform-toggle-btn:hover:not(.active) { color: var(--black); }
+.platform-toggle-btn.active { background: var(--black); color: var(--white); }
 
 /* ==========================================================================
    Feature grid (why AinzApp / app feature highlights)
@@ -401,7 +441,7 @@ nav { padding: 0; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #6d3bd1, #b83b8f);
+    background: linear-gradient(135deg, #1f3a5f, #3b6ea5);
 }
 
 .app-hero-text h1 {
@@ -425,10 +465,21 @@ nav { padding: 0; }
 
 .app-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 
+.app-hero-image { position: relative; }
+.app-hero-image::before {
+    content: '';
+    position: absolute;
+    inset: -12%;
+    background: radial-gradient(circle at 50% 35%, rgba(59,110,165,0.32), transparent 70%);
+    filter: blur(50px);
+    z-index: -1;
+}
+
 .app-hero-image img {
     width: 100%;
     border-radius: var(--radius-lg);
     box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6);
+    position: relative;
 }
 
 .status-pill {
@@ -510,14 +561,18 @@ nav { padding: 0; }
 
 .gallery-tab {
     background: var(--gray-50);
+    color: var(--black);
     border: 1px solid var(--gray-100);
     padding: 0.5rem 1.2rem;
     border-radius: 999px;
+    font-family: inherit;
     font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.2s var(--ease);
 }
+.gallery-tab:hover { background: var(--gray-100); }
 .gallery-tab.active { background: var(--black); color: var(--white); border-color: var(--black); }
+.gallery-panel .gallery-scroll { padding-top: 0; }
 
 .gallery-panel { display: none; }
 .gallery-panel.active { display: block; }
