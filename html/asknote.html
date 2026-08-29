@@ -42,7 +42,7 @@
                         <div class="app-buttons">
                             <a href="https://apps.apple.com/kr/app/id6794216892" class="btn btn-primary" target="_blank" rel="noopener">Download for macOS</a>
                             <a href="contact.html" class="btn btn-secondary">Get notified for iOS</a>
-                            <a href="#features" class="btn btn-outline">Learn more</a>
+                            <a href="#features" class="btn btn-outline" data-learn-more>Learn more</a>
                         </div>
                     </div>
                     <div class="app-hero-image" data-platform-switch>
@@ -58,47 +58,100 @@
 
         <section id="features" class="section">
             <div class="container">
-
-                <div class="highlight-row reveal">
-                    <div class="highlight-media">
-                        <img src="images/AskNote/web/asknote-iphone-en-3.png" alt="AskNote Ask AI feature">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Learn more</span>
+                    <h2>See AskNote on your platform</h2>
+                </div>
+                <div class="reveal" data-gallery>
+                    <div class="gallery-tabs">
+                        <button type="button" class="gallery-tab active" data-target="features-macos" data-platform="macos">macOS</button>
+                        <button type="button" class="gallery-tab" data-target="features-ios" data-platform="ios">iPhone &amp; iPad</button>
                     </div>
-                    <div class="highlight-text">
-                        <h3>Ask AI about your notes</h3>
-                        <p>Chat directly with your own notes. AskNote reads across your library and answers based on what you've already written — no manual searching required.</p>
+
+                    <div id="features-macos" class="gallery-panel active">
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-macos-en-2.png" alt="AskNote Ask AI feature on Mac">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Ask AI about your notes, right on your Mac</h3>
+                                <p>Chat directly with your own notes from a full desktop window. AskNote reads across your library and answers based on what you've already written — no manual searching required.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row reverse">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-macos-en-3.png" alt="AskNote recording notes feature on Mac">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Record meetings without leaving your desk</h3>
+                                <p>Capture a meeting, lecture, or call and let on-device AI transcribe and summarize it — fully offline, with nothing leaving your Mac.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-macos-en-4.png" alt="AskNote AI auto-generation feature on Mac">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Auto-summary, auto-tagging</h3>
+                                <p>AskNote automatically summarizes, tags, and links related notes together, so your library stays organized without extra effort.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row reverse">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-macos-en-5.png" alt="AskNote chat with cloud AI on Mac">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Choose your own AI</h3>
+                                <p>Stay fully on-device with Apple Intelligence or Google LiteRT-LM, or connect your own key for Gemini, Claude, ChatGPT, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="features-ios" class="gallery-panel">
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-iphone-en-3.png" alt="AskNote Ask AI feature">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Ask AI about your notes</h3>
+                                <p>Chat directly with your own notes. AskNote reads across your library and answers based on what you've already written — no manual searching required.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row reverse">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-iphone-en-4.png" alt="AskNote recording notes feature">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Recording notes, generated offline</h3>
+                                <p>Record a meeting, lecture, or daily memo and let on-device AI transcribe and summarize it — fully offline, with nothing leaving your device.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-iphone-en-5.png" alt="AskNote AI auto-generation feature">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Auto-summary, auto-tagging</h3>
+                                <p>AskNote automatically summarizes, tags, and links related notes together, so your library stays organized without extra effort.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row reverse">
+                            <div class="highlight-media">
+                                <img src="images/AskNote/web/asknote-iphone-en-6.png" alt="AskNote chat with cloud AI">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Choose your own AI</h3>
+                                <p>Stay fully on-device with Apple Intelligence or Google LiteRT-LM, or connect your own key for Gemini, Claude, ChatGPT, and more.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="highlight-row reverse reveal">
-                    <div class="highlight-media">
-                        <img src="images/AskNote/web/asknote-iphone-en-4.png" alt="AskNote recording notes feature">
-                    </div>
-                    <div class="highlight-text">
-                        <h3>Recording notes, generated offline</h3>
-                        <p>Record a meeting, lecture, or daily memo and let on-device AI transcribe and summarize it — fully offline, with nothing leaving your device.</p>
-                    </div>
-                </div>
-
-                <div class="highlight-row reveal">
-                    <div class="highlight-media">
-                        <img src="images/AskNote/web/asknote-iphone-en-5.png" alt="AskNote AI auto-generation feature">
-                    </div>
-                    <div class="highlight-text">
-                        <h3>Auto-summary, auto-tagging</h3>
-                        <p>AskNote automatically summarizes, tags, and links related notes together, so your library stays organized without extra effort.</p>
-                    </div>
-                </div>
-
-                <div class="highlight-row reverse reveal">
-                    <div class="highlight-media">
-                        <img src="images/AskNote/web/asknote-iphone-en-6.png" alt="AskNote chat with cloud AI">
-                    </div>
-                    <div class="highlight-text">
-                        <h3>Choose your own AI</h3>
-                        <p>Stay fully on-device with Apple Intelligence or Google LiteRT-LM, or connect your own key for Gemini, Claude, ChatGPT, and more.</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 

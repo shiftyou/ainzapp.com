@@ -39,7 +39,7 @@
                         <div class="app-buttons">
                             <a href="https://apps.apple.com/kr/app/id6677052934" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS</a>
                             <a href="https://apps.apple.com/kr/app/weeklytodo-for-desktop/id6736765711" class="btn btn-secondary" target="_blank" rel="noopener">Download for macOS</a>
-                            <a href="#features" class="btn btn-outline">Learn more</a>
+                            <a href="#features" class="btn btn-outline" data-learn-more>Learn more</a>
                         </div>
                     </div>
                     <div class="app-hero-image" data-platform-switch>
@@ -55,37 +55,60 @@
 
         <section id="features" class="section">
             <div class="container">
-
-                <div class="highlight-row reveal">
-                    <div class="highlight-media">
-                        <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo weekly view">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Learn more</span>
+                    <h2>See WeeklyTodo on your platform</h2>
+                </div>
+                <div class="reveal" data-gallery>
+                    <div class="gallery-tabs">
+                        <button type="button" class="gallery-tab active" data-target="features-ios" data-platform="ios">iOS</button>
+                        <button type="button" class="gallery-tab" data-target="features-macos" data-platform="macos">macOS</button>
                     </div>
-                    <div class="highlight-text">
-                        <h3>See your whole week at a glance</h3>
-                        <p>An intuitive weekly calendar interface lays out every task and event, so you always know what's next without digging through lists.</p>
+
+                    <div id="features-ios" class="gallery-panel active">
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo weekly view">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>See your whole week at a glance</h3>
+                                <p>An intuitive weekly calendar interface lays out every task and event, so you always know what's next without digging through lists.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row reverse">
+                            <div class="highlight-media">
+                                <img src="images/WeeklyTodo/iOS/WeeklyTodo3.png" alt="WeeklyTodo task management">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Task management that keeps up with you</h3>
+                                <p>Create, edit, and prioritize tasks with due dates. Overdue items surface automatically so nothing slips through the cracks.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/WeeklyTodo/iOS/WeeklyTodo4.png" alt="WeeklyTodo widgets">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>Widgets, sync, and quick notes</h3>
+                                <p>Add widgets to your home screen for one-glance access, jot quick notes alongside your tasks, and stay in sync across every device.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="features-macos" class="gallery-panel">
+                        <div class="highlight-row">
+                            <div class="highlight-media">
+                                <img src="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" alt="WeeklyTodo macOS weekly view">
+                            </div>
+                            <div class="highlight-text">
+                                <h3>The same weekly view, built for your desktop</h3>
+                                <p>Plan your week from a full-size window with keyboard shortcuts, and stay in sync with iOS automatically — every task and note carries over.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="highlight-row reverse reveal">
-                    <div class="highlight-media">
-                        <img src="images/WeeklyTodo/iOS/WeeklyTodo3.png" alt="WeeklyTodo task management">
-                    </div>
-                    <div class="highlight-text">
-                        <h3>Task management that keeps up with you</h3>
-                        <p>Create, edit, and prioritize tasks with due dates. Overdue items surface automatically so nothing slips through the cracks.</p>
-                    </div>
-                </div>
-
-                <div class="highlight-row reveal">
-                    <div class="highlight-media">
-                        <img src="images/WeeklyTodo/iOS/WeeklyTodo4.png" alt="WeeklyTodo widgets">
-                    </div>
-                    <div class="highlight-text">
-                        <h3>Widgets, sync, and quick notes</h3>
-                        <p>Add widgets to your home screen for one-glance access, jot quick notes alongside your tasks, and stay in sync across every device.</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 

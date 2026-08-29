@@ -38,6 +38,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    var learnMoreLinks = document.querySelectorAll('[data-learn-more]');
+    learnMoreLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            var heroSwitch = document.querySelector('.app-hero [data-platform-switch]');
+            var activeHeroBtn = heroSwitch && heroSwitch.querySelector('.platform-toggle-btn.active');
+            if (!activeHeroBtn) return;
+            var targetId = (link.getAttribute('href') || '').replace('#', '');
+            var target = document.getElementById(targetId);
+            if (!target) return;
+            var matchingTab = target.querySelector('.gallery-tab[data-platform="' + activeHeroBtn.dataset.platform + '"]');
+            if (matchingTab) matchingTab.click();
+        });
+    });
+
     var switches = document.querySelectorAll('[data-platform-switch]');
     switches.forEach(function (el) {
         var img = el.querySelector('img');
