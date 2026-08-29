@@ -277,6 +277,7 @@ nav { padding: 0; }
     padding: 2rem;
     overflow: hidden;
     border-right: 1px solid var(--gray-100);
+    text-decoration: none;
 }
 .tile:last-child { border-right: none; }
 
@@ -295,15 +296,28 @@ nav { padding: 0; }
     background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.82) 100%);
 }
 
-.tile-content { position: relative; color: var(--white); }
+.tile-content {
+    position: relative;
+    color: var(--white);
+    display: inline-block;
+    background: rgba(0,0,0,0.55);
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
 .tile-content .tile-name {
     font-family: 'Space Grotesk', inherit;
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
 }
-.tile-content .tile-tag { font-size: 0.86rem; color: rgba(255,255,255,0.78); margin-bottom: 0.7rem; }
-.tile-content .tile-arrow { font-size: 0.85rem; font-weight: 600; }
+.tile-content .tile-tag { font-size: 0.86rem; color: rgba(255,255,255,0.85); margin-bottom: 0.7rem; }
+.tile-content .tile-arrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
 
 /* ==========================================================================
    Zig-zag product showcase (home page)
