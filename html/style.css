@@ -164,6 +164,7 @@ nav { padding: 0; }
     padding-right: 0;
 }
 .btn-outline::after { content: ' \2192'; }
+.btn-outline.no-arrow::after { content: ''; }
 .btn-outline:hover { color: var(--blue-dark) !important; }
 
 .btn-light {
@@ -228,29 +229,81 @@ nav { padding: 0; }
    ========================================================================== */
 
 .hero {
-    background: var(--white) !important;
-    color: var(--black) !important;
-    padding: 8rem 0 5rem;
-    text-align: center;
+    background: var(--black) !important;
+    color: var(--white) !important;
+    padding: 6.5rem 0 5.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(circle at 25% 20%, rgba(59,110,165,0.28), transparent 60%);
+    pointer-events: none;
 }
 
+.hero-content { position: relative; max-width: 780px; }
+
 .hero-content h1 {
+    font-family: 'Space Grotesk', var(--font-sans-fallback, inherit);
     font-size: clamp(2.6rem, 6vw, 4.6rem);
     font-weight: 700;
+    line-height: 1.04;
     letter-spacing: -0.03em;
     margin-bottom: 1.2rem;
 }
 
 .hero-content p {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
-    color: var(--gray-500);
+    color: var(--gray-300);
     margin-bottom: 2.5rem;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 600px;
 }
 
-.hero-buttons { margin-bottom: 0; }
+.hero-buttons { margin-bottom: 0; justify-content: flex-start; }
+
+/* ==========================================================================
+   Quick app tiles (home page)
+   ========================================================================== */
+
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); }
+
+.tile {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 340px;
+    padding: 2rem;
+    overflow: hidden;
+    border-right: 1px solid var(--gray-100);
+}
+.tile:last-child { border-right: none; }
+
+.tile-media {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    transition: transform 0.5s cubic-bezier(.2,.7,.3,1);
+}
+.tile:hover .tile-media { transform: scale(1.06); }
+
+.tile::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.82) 100%);
+}
+
+.tile-content { position: relative; color: var(--white); }
+.tile-content .tile-name {
+    font-family: 'Space Grotesk', inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+.tile-content .tile-tag { font-size: 0.86rem; color: rgba(255,255,255,0.78); margin-bottom: 0.7rem; }
+.tile-content .tile-arrow { font-size: 0.85rem; font-weight: 600; }
 
 /* ==========================================================================
    Zig-zag product showcase (home page)
@@ -259,9 +312,8 @@ nav { padding: 0; }
 .showcase-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    padding: 5rem 0;
+    align-items: stretch;
+    min-height: 560px;
     border-top: 1px solid var(--gray-100);
 }
 
@@ -270,12 +322,16 @@ nav { padding: 0; }
 .showcase-row.reverse .showcase-media { order: 2; }
 .showcase-row.reverse .showcase-text { order: 1; }
 
+.showcase-row.on-dark { background: var(--black); color: var(--white); border-top-color: rgba(255,255,255,0.08); }
+.showcase-row.on-dark .showcase-media { background: rgba(255,255,255,0.04); }
+.showcase-row.on-dark .showcase-text p.desc { color: var(--gray-300); }
+
 .showcase-media, .showcase-text { min-width: 0; }
 
 .showcase-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     margin-bottom: 1.5rem;
 }
 .showcase-icon.placeholder {
@@ -286,21 +342,91 @@ nav { padding: 0; }
     color: white;
 }
 
+.showcase-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem clamp(2rem, 6vw, 5rem);
+}
+
 .showcase-text h3 {
+    font-family: 'Space Grotesk', inherit;
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 1rem;
 }
 
-.showcase-text p {
-    font-size: 1.1rem;
+.showcase-text p.desc {
+    font-size: 1.08rem;
     color: var(--gray-500);
     margin-bottom: 1.75rem;
+    max-width: 480px;
+}
+
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
+.feature-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.98rem; }
+.feature-list svg { flex: 0 0 auto; margin-top: 0.15rem; }
+
+/* ==========================================================================
+   Why AinzApp (home page, minimal grid)
+   ========================================================================== */
+
+.why-section { padding: 7rem 0; text-align: center; }
+.why-section .section-head { margin-bottom: 3.5rem; }
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--gray-100);
+    border-left: 1px solid var(--gray-100);
+}
+.why-item {
+    padding: 2.75rem 2rem;
+    border-right: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+    text-align: left;
+}
+.why-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.why-item p { color: var(--gray-500); font-size: 0.95rem; }
+
+/* ==========================================================================
+   Dense footer variant (home page)
+   ========================================================================== */
+
+.footer-dark {
+    background: var(--black) !important;
+    color: rgba(255,255,255,0.85);
+    border-top: none;
+    padding: 4.5rem 0 2rem;
+}
+.footer-grid-wide {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.footer-grid-wide h4 {
+    font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 1rem; color: rgba(255,255,255,0.5);
+}
+.footer-grid-wide a, .footer-grid-wide p {
+    display: block; font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.6rem;
+    text-decoration: none;
+}
+.footer-grid-wide a:hover { color: var(--white); }
+.footer-grid-wide .footer-brand-name { font-family: 'Space Grotesk', inherit; font-size: 1rem; font-weight: 700; color: var(--white); }
+.footer-grid-wide .footer-brand p { color: rgba(255,255,255,0.5); max-width: 220px; }
+.footer-bottom-dark {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.82rem; color: rgba(255,255,255,0.5);
 }
 
 .showcase-media img {
-    width: 100%;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
     border-radius: var(--radius-md);
     box-shadow: 0 30px 60px -20px rgba(0,0,0,0.25);
 }
@@ -312,6 +438,7 @@ nav { padding: 0; }
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 420px;
 }
 
 /* ==========================================================================
@@ -465,7 +592,13 @@ nav { padding: 0; }
 
 .app-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-.app-hero-image { position: relative; }
+.app-hero-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 460px;
+}
 .app-hero-image::before {
     content: '';
     position: absolute;
@@ -476,7 +609,10 @@ nav { padding: 0; }
 }
 
 .app-hero-image img {
-    width: 100%;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
     border-radius: var(--radius-lg);
     box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6);
     position: relative;
@@ -548,8 +684,7 @@ nav { padding: 0; }
     box-shadow: 0 16px 40px -16px rgba(0,0,0,0.25);
 }
 
-.gallery-scroll .shot img { height: 480px; width: auto; }
-.gallery-scroll .shot.wide img { height: 340px; }
+.gallery-scroll .shot img { height: 420px; width: auto; }
 
 .gallery-tabs {
     display: flex;
@@ -828,6 +963,12 @@ footer {
         order: initial;
     }
     .footer-content { grid-template-columns: 1fr 1fr; }
+    .app-hero-image { height: 360px; }
+    .showcase-media { height: 320px; }
+    .tiles { grid-template-columns: 1fr; }
+    .tile { border-right: none; border-bottom: 1px solid var(--gray-100); }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid-wide { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -861,10 +1002,12 @@ footer {
     .hero { padding: 5.5rem 0 3.5rem; }
     .app-hero { padding: 4.5rem 0 3.5rem; }
 
-    .btn-row, .app-buttons { flex-direction: column; align-items: stretch; }
-    .btn-row .btn, .app-buttons .btn { text-align: center; }
+    .btn-row, .app-buttons, .hero-buttons { flex-direction: column; align-items: stretch; }
+    .btn-row .btn, .app-buttons .btn, .hero-buttons .btn { text-align: center; justify-content: center; }
 
     .contact-grid { gap: 3rem; }
+    .showcase-text { padding: 3rem 1.75rem; }
+    .why-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

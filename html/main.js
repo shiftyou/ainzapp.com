@@ -30,10 +30,24 @@ document.addEventListener('DOMContentLoaded', function () {
         tabs.forEach(function (tab) {
             tab.addEventListener('click', function () {
                 var group = tab.closest('[data-gallery]');
+                var beforeTop = group.getBoundingClientRect().top;
                 group.querySelectorAll('.gallery-tab').forEach(function (t) { t.classList.remove('active'); });
                 group.querySelectorAll('.gallery-panel').forEach(function (p) { p.classList.remove('active'); });
                 tab.classList.add('active');
                 group.querySelector('#' + tab.dataset.target).classList.add('active');
+                tab.blur();
+                // Swapping panels (different content height) can make the browser
+                // auto-scroll to keep the focused button "comfortably" placed
+                // (notably on mobile Safari). Re-anchor to where the group was
+                // on screen once that auto-scroll has had a chance to happen.
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        var afterTop = group.getBoundingClientRect().top;
+                        if (afterTop !== beforeTop) {
+                            window.scrollBy(0, afterTop - beforeTop);
+                        }
+                    });
+                });
             });
         });
     }
