@@ -1,13 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('header');
     var toggle = document.querySelector('.nav-toggle');
     var links = document.querySelector('.nav-links');
     if (toggle && links) {
         toggle.addEventListener('click', function () {
             links.classList.toggle('open');
+            if (header) header.classList.toggle('menu-open', links.classList.contains('open'));
         });
         links.querySelectorAll('a').forEach(function (a) {
-            a.addEventListener('click', function () { links.classList.remove('open'); });
+            a.addEventListener('click', function () {
+                links.classList.remove('open');
+                if (header) header.classList.remove('menu-open');
+            });
         });
+    }
+
+    if (header && document.body.classList.contains('page-home')) {
+        var syncHeader = function () {
+            header.classList.toggle('is-scrolled', window.scrollY > 16);
+        };
+        syncHeader();
+        window.addEventListener('scroll', syncHeader, { passive: true });
     }
 
     var reveals = document.querySelectorAll('.reveal');

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AinzApp — WeeklyTodo, TagNote & AskNote</title>
+    <meta name="description" content="Quiet productivity apps for iPhone and Mac. WeeklyTodo, TagNote, and AskNote — native on iOS and macOS.">
+    <link rel="icon" href="images/ainzapp_icon.jpg">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-home">
     <header>
         <nav>
             <div class="nav-container">
@@ -29,103 +31,166 @@
 
     <main>
         <section class="hero">
-            <div class="container hero-content">
-                <span class="status-pill">New — AskNote</span>
-                <h1>Productivity apps,<br>thoughtfully made.</h1>
-                <p>WeeklyTodo, TagNote, and AskNote — productivity apps that help you plan your week, capture your notes, and think alongside AI, each built to feel effortless.</p>
-                <div class="hero-buttons btn-row">
-                    <a href="#tiles" class="btn btn-primary no-arrow">See all apps ↓</a>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="status-pill">iPhone, iPad, and Mac</span>
+                    <h1>iPhone-native.<br>Mac-native.</h1>
+                    <p>Three productivity apps, each built for the screen it lives on. iOS and macOS are not treated as the same product — unless they really are one app.</p>
+                    <div class="hero-buttons btn-row">
+                        <a href="#apps" class="btn btn-primary no-arrow">See the apps</a>
+                        <a href="#downloads" class="btn btn-ghost-light no-arrow">App Store listings</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <figure class="hero-mac">
+                        <img src="images/AskNote/web/asknote-macos-en-2.png" alt="">
+                    </figure>
+                    <figure class="hero-phone">
+                        <img src="images/AskNote/web/asknote-iphone-en-1.png" alt="">
+                    </figure>
+                    <div class="hero-os-pills">
+                        <span>iOS</span>
+                        <span>macOS</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="tiles" class="tiles reveal">
-            <a class="tile" href="#weeklytodo">
-                <div class="tile-media" style="background-image:url(images/WeeklyTodo/iOS/WeeklyTodo1.png)"></div>
-                <div class="tile-content">
-                    <div class="tile-name">WeeklyTodo</div>
-                    <div class="tile-tag">Plan your week, not just your day</div>
-                    <div class="tile-arrow">Explore →</div>
+        <section id="apps" class="app-stage">
+            <div class="container">
+                <div class="app-stage-head reveal">
+                    <img class="app-stage-icon" src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="">
+                    <div class="app-stage-copy">
+                        <div class="app-stage-kicker">
+                            <span class="os-badge">iOS</span>
+                            <span class="os-badge os-mac">macOS</span>
+                            Separate apps
+                        </div>
+                        <h2>WeeklyTodo</h2>
+                        <p>Plan the week, not just the day. On iPhone and iPad it’s <strong>WeeklyTodo</strong>. On Mac it’s a dedicated desktop app: <strong>WeeklyTodo Desk</strong>.</p>
+                    </div>
+                    <a href="weeklytodo.html" class="btn btn-outline">Learn more</a>
                 </div>
-            </a>
-            <a class="tile" href="#tagnote">
-                <div class="tile-media" style="background-image:url(images/TagNote/iOS/영어/TagNote_ios1.png)"></div>
-                <div class="tile-content">
-                    <div class="tile-name">TagNote</div>
-                    <div class="tile-tag">Notes that organize themselves</div>
-                    <div class="tile-arrow">Explore →</div>
+                <div class="platform-split reveal">
+                    <article class="platform-card">
+                        <div class="shot phone">
+                            <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo on iPhone">
+                        </div>
+                        <div class="platform-meta">
+                            <span class="os-badge">iOS</span>
+                            <h3>WeeklyTodo</h3>
+                            <p>iPhone &amp; iPad · Calendar &amp; Reminders sync</p>
+                            <a class="store-btn" href="https://apps.apple.com/app/id6677052934" target="_blank" rel="noopener">
+                                <span class="store-btn-label"><small>Download on the</small>App Store</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="platform-card">
+                        <div class="shot mac">
+                            <img src="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" alt="WeeklyTodo Desk on Mac">
+                        </div>
+                        <div class="platform-meta">
+                            <span class="os-badge os-mac">macOS</span>
+                            <h3>WeeklyTodo Desk</h3>
+                            <p>Mac · Built for a desktop week view</p>
+                            <a class="store-btn" href="https://apps.apple.com/app/id6736765711" target="_blank" rel="noopener">
+                                <span class="store-btn-label"><small>Download on the</small>App Store</span>
+                            </a>
+                        </div>
+                    </article>
                 </div>
-            </a>
-            <a class="tile" href="#asknote">
-                <div class="tile-media" style="background-image:url(images/AskNote/web/asknote-iphone-en-1.png)"></div>
-                <div class="tile-content">
-                    <div class="tile-name">AskNote</div>
-                    <div class="tile-tag">AI that knows your notes</div>
-                    <div class="tile-arrow">Explore →</div>
-                </div>
-            </a>
-        </section>
-
-        <section id="weeklytodo" class="showcase-row reveal">
-            <div class="showcase-media" data-platform-switch>
-                <img src="images/WeeklyTodo/iOS/WeeklyTodo1.png" alt="WeeklyTodo iPhone screenshot" data-ios="images/WeeklyTodo/iOS/WeeklyTodo1.png" data-ios-alt="WeeklyTodo iPhone screenshot" data-macos="images/WeeklyTodo/macOS/WeeklyTodoDesk1.png" data-macos-alt="WeeklyTodo macOS screenshot">
-                <div class="platform-toggle">
-                    <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
-                    <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
-                </div>
-            </div>
-            <div class="showcase-text">
-                <img class="showcase-icon" src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="WeeklyTodo icon">
-                <h3>Plan your week,<br>not just your day.</h3>
-                <p class="desc">Organize your life with a weekly perspective. Plan tasks, manage schedules, and never miss a deadline — with widgets and sync built in.</p>
-                <ul class="feature-list">
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Weekly view built for planning ahead</li>
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Home screen widgets that stay current</li>
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Syncs instantly across iPhone and Mac</li>
-                </ul>
-                <a href="weeklytodo.html" class="btn btn-outline">Learn more</a>
-            </div>
-        </section>
-
-        <section id="tagnote" class="showcase-row reverse on-dark reveal">
-            <div class="showcase-media" data-platform-switch>
-                <img src="images/TagNote/iOS/영어/TagNote_ios1.png" alt="TagNote iPhone screenshot" data-ios="images/TagNote/iOS/영어/TagNote_ios1.png" data-ios-alt="TagNote iPhone screenshot" data-macos="images/TagNote/macOS/TagNote1.png" data-macos-alt="TagNote macOS screenshot">
-                <div class="platform-toggle">
-                    <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
-                    <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
-                </div>
-            </div>
-            <div class="showcase-text">
-                <img class="showcase-icon" src="images/TagNote/TagNote_icon.png" alt="TagNote icon">
-                <h3>Notes that<br>organize themselves.</h3>
-                <p class="desc">Capture and organize your notes with a powerful tagging system. Rich text, folders, and cloud sync make every idea easy to find again.</p>
-                <ul class="feature-list">
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tag-based organization, no rigid folders</li>
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Rich text editing with instant search</li>
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Cloud sync across every device</li>
-                </ul>
-                <a href="tagnote.html" class="btn btn-outline" style="border-color:var(--gray-300);color:#fff;">Learn more</a>
             </div>
         </section>
 
-        <section id="asknote" class="showcase-row reveal">
-            <div class="showcase-media" data-platform-switch>
-                <img src="images/AskNote/web/asknote-iphone-en-1.png" alt="AskNote iPhone screenshot" data-ios="images/AskNote/web/asknote-iphone-en-1.png" data-ios-alt="AskNote iPhone screenshot" data-macos="images/AskNote/web/asknote-macos-en-1.png" data-macos-alt="AskNote macOS screenshot">
-                <div class="platform-toggle">
-                    <button type="button" class="platform-toggle-btn active" data-platform="ios">iPhone</button>
-                    <button type="button" class="platform-toggle-btn" data-platform="macos">Mac</button>
+        <section id="tagnote" class="app-stage app-stage-dark">
+            <div class="container">
+                <div class="app-stage-head reveal">
+                    <img class="app-stage-icon" src="images/TagNote/TagNote_icon.png" alt="">
+                    <div class="app-stage-copy">
+                        <div class="app-stage-kicker">
+                            <span class="os-badge">iOS</span>
+                            <span class="os-badge os-mac">macOS</span>
+                            Universal app
+                        </div>
+                        <h2>TagNote</h2>
+                        <p>Tag your notes, forget folders. One listing for iPhone, iPad, and Mac — with a layout that fits each device.</p>
+                    </div>
+                    <a href="tagnote.html" class="btn btn-outline">Learn more</a>
+                </div>
+                <div class="platform-split reveal">
+                    <article class="platform-card">
+                        <div class="shot phone">
+                            <img src="images/TagNote/iOS/영어/TagNote_ios1.png" alt="TagNote on iPhone">
+                        </div>
+                        <div class="platform-meta">
+                            <span class="os-badge">iOS</span>
+                            <h3>iPhone &amp; iPad</h3>
+                            <p>Capture on the go, find it by tag</p>
+                            <a class="store-btn store-btn-light" href="https://apps.apple.com/app/id6747192758" target="_blank" rel="noopener">
+                                <span class="store-btn-label"><small>Download on the</small>App Store</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="platform-card">
+                        <div class="shot mac">
+                            <img src="images/TagNote/macOS/TagNote1.png" alt="TagNote on Mac">
+                        </div>
+                        <div class="platform-meta">
+                            <span class="os-badge os-mac">macOS</span>
+                            <h3>Mac</h3>
+                            <p>A wide editor for longer thinking</p>
+                            <a class="store-btn store-btn-light" href="https://apps.apple.com/app/id6747192758" target="_blank" rel="noopener">
+                                <span class="store-btn-label"><small>Download on the</small>App Store</span>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="showcase-text">
-                <img class="showcase-icon" src="images/AskNote/AskNote_icon.png" alt="AskNote icon">
-                <h3>AI that knows<br>your own notes.</h3>
-                <p class="desc">Ask AI about your own notes, turn meetings and lectures into structured notes automatically, and chat with on-device or cloud AI — offline, private, and always accessible.</p>
-                <ul class="feature-list">
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Ask questions across your whole library</li>
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Records &amp; summarizes meetings offline</li>
-                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Bring your own AI — Gemini, Claude, ChatGPT</li>
-                </ul>
-                <a href="asknote.html" class="btn btn-outline">Learn more</a>
+        </section>
+
+        <section id="asknote" class="app-stage">
+            <div class="container">
+                <div class="app-stage-head reveal">
+                    <img class="app-stage-icon" src="images/AskNote/AskNote_icon.png" alt="">
+                    <div class="app-stage-copy">
+                        <div class="app-stage-kicker">
+                            <span class="os-badge">iOS</span>
+                            <span class="os-badge os-mac">macOS</span>
+                            Universal app
+                        </div>
+                        <h2>AskNote</h2>
+                        <p>On-device AI notes and meeting minutes. Ask questions about your own library — on iPhone, iPad, and Mac from a single App Store listing.</p>
+                    </div>
+                    <a href="asknote.html" class="btn btn-outline">Learn more</a>
+                </div>
+                <div class="platform-split reveal">
+                    <article class="platform-card">
+                        <div class="shot phone">
+                            <img src="images/AskNote/web/asknote-iphone-en-1.png" alt="AskNote on iPhone">
+                        </div>
+                        <div class="platform-meta">
+                            <span class="os-badge">iOS</span>
+                            <h3>iPhone &amp; iPad</h3>
+                            <p>Record, ask, and organize from your pocket</p>
+                            <a class="store-btn" href="https://apps.apple.com/app/id6794216892" target="_blank" rel="noopener">
+                                <span class="store-btn-label"><small>Download on the</small>App Store</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="platform-card">
+                        <div class="shot mac">
+                            <img src="images/AskNote/web/asknote-macos-en-2.png" alt="AskNote on Mac">
+                        </div>
+                        <div class="platform-meta">
+                            <span class="os-badge os-mac">macOS</span>
+                            <h3>Mac</h3>
+                            <p>A full desktop window for asking your notes</p>
+                            <a class="store-btn" href="https://apps.apple.com/app/id6794216892" target="_blank" rel="noopener">
+                                <span class="store-btn-label"><small>Download on the</small>App Store</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -133,34 +198,68 @@
             <div class="container">
                 <div class="section-head reveal">
                     <span class="eyebrow">Why AinzApp</span>
-                    <h2>Built to get out of your way</h2>
+                    <h2>Built for the device in front of you</h2>
                 </div>
                 <div class="why-grid reveal">
                     <div class="why-item">
-                        <h3>Cross-platform</h3>
-                        <p>Access your data seamlessly across iPhone, iPad, and Mac.</p>
+                        <h3>iOS and macOS, on purpose</h3>
+                        <p>Phone layouts stay phone-sized. Mac apps get a real desktop canvas — and WeeklyTodo even ships as two apps.</p>
                     </div>
                     <div class="why-item">
                         <h3>Private by design</h3>
-                        <p>Your data stays yours, protected with industry-standard security.</p>
+                        <p>Your notes and plans stay yours. These apps are built not to collect your data.</p>
                     </div>
                     <div class="why-item">
-                        <h3>Fast &amp; efficient</h3>
-                        <p>Optimized for speed and minimal resource usage on every device.</p>
+                        <h3>Fast &amp; light</h3>
+                        <p>Native Apple apps, tuned to feel instant instead of busy.</p>
                     </div>
                     <div class="why-item">
-                        <h3>Beautifully simple</h3>
-                        <p>A modern, intuitive interface that stays out of your way.</p>
+                        <h3>Quiet to look at</h3>
+                        <p>Interfaces that step back so the week, the tags, and the questions can come first.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="app-cta">
+        <section id="downloads" class="download-board">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to get more done?</h2>
-                    <a href="#tiles" class="btn btn-primary">Explore the apps →</a>
+                <div class="section-head reveal">
+                    <span class="eyebrow">App Store</span>
+                    <h2>Pick the right listing</h2>
+                </div>
+                <div class="download-list reveal">
+                    <a class="download-row" href="https://apps.apple.com/app/id6677052934" target="_blank" rel="noopener">
+                        <img src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="">
+                        <div>
+                            <strong>WeeklyTodo</strong>
+                            <span>iPhone &amp; iPad</span>
+                        </div>
+                        <em>iOS</em>
+                    </a>
+                    <a class="download-row" href="https://apps.apple.com/app/id6736765711" target="_blank" rel="noopener">
+                        <img src="images/WeeklyTodo/WeeklyTodo_icon.png" alt="">
+                        <div>
+                            <strong>WeeklyTodo Desk</strong>
+                            <span>Mac</span>
+                        </div>
+                        <em>macOS</em>
+                    </a>
+                    <a class="download-row" href="https://apps.apple.com/app/id6747192758" target="_blank" rel="noopener">
+                        <img src="images/TagNote/TagNote_icon.png" alt="">
+                        <div>
+                            <strong>TagNote</strong>
+                            <span>iPhone, iPad &amp; Mac</span>
+                        </div>
+                        <em>Universal</em>
+                    </a>
+                    <a class="download-row" href="https://apps.apple.com/app/id6794216892" target="_blank" rel="noopener">
+                        <img src="images/AskNote/AskNote_icon.png" alt="">
+                        <div>
+                            <strong>AskNote</strong>
+                            <span>iPhone, iPad &amp; Mac</span>
+                        </div>
+                        <em>Universal</em>
+                    </a>
                 </div>
             </div>
         </section>
@@ -171,11 +270,12 @@
             <div class="footer-grid-wide">
                 <div class="footer-brand">
                     <div class="footer-brand-name">AinzApp</div>
-                    <p>Making productivity simple and effective.</p>
+                    <p>Productivity apps, native on iPhone and Mac.</p>
                 </div>
                 <div>
                     <h4>Apps</h4>
                     <a href="weeklytodo.html">WeeklyTodo</a>
+                    <a href="https://apps.apple.com/app/id6736765711" target="_blank" rel="noopener">WeeklyTodo Desk</a>
                     <a href="tagnote.html">TagNote</a>
                     <a href="asknote.html">AskNote</a>
                 </div>
@@ -184,10 +284,6 @@
                     <a href="contact.html">Contact</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <a href="contact.html">Contact</a>
                 </div>
                 <div>
                     <h4>Language</h4>
