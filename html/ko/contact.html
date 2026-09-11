@@ -76,6 +76,18 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="product">제품</label>
+                                <select name="product" id="product" required>
+                                    <option value="" disabled selected>앱을 선택하세요</option>
+                                    <option value="AskNote">AskNote (iPhone, iPad, Mac)</option>
+                                    <option value="TagNote">TagNote (iPhone, iPad, Mac)</option>
+                                    <option value="WeeklyTodo">WeeklyTodo (iPhone &amp; iPad)</option>
+                                    <option value="WeeklyTodo Desk">WeeklyTodo Desk (Mac)</option>
+                                    <option value="General">기타 / 일반 문의</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
                                 <label>제목</label>
                                 <input type="text" name="subject" required>
                             </div>
@@ -86,6 +98,7 @@
                             </div>
 
                             <input type="text" name="_honey" style="display: none">
+                            <input type="hidden" name="_subject" id="mail-subject" value="AinzApp 문의">
                             <input type="hidden" name="_autoresponse" value="감사합니다. 문의하신 내용은 검토 후 순차적으로 답변 드리도록 하겠습니다.">
                             <input type="hidden" name="_next" value="https://ainzapp.com/ko/thank-you.html">
 

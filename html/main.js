@@ -1,13 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('header');
     var toggle = document.querySelector('.nav-toggle');
     var links = document.querySelector('.nav-links');
     if (toggle && links) {
         toggle.addEventListener('click', function () {
             links.classList.toggle('open');
+            if (header) header.classList.toggle('menu-open', links.classList.contains('open'));
         });
         links.querySelectorAll('a').forEach(function (a) {
-            a.addEventListener('click', function () { links.classList.remove('open'); });
+            a.addEventListener('click', function () {
+                links.classList.remove('open');
+                if (header) header.classList.remove('menu-open');
+            });
         });
+    }
+
+    if (header && document.body.classList.contains('page-home')) {
+        var syncHeader = function () {
+            header.classList.toggle('is-scrolled', window.scrollY > 16);
+        };
+        syncHeader();
+        window.addEventListener('scroll', syncHeader, { passive: true });
     }
 
     var reveals = document.querySelectorAll('.reveal');
@@ -85,4 +98,26 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    var contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        var product = contactForm.querySelector('[name="product"]');
+        var params = new URLSearchParams(window.location.search);
+        var preset = params.get('product');
+        if (product && preset) {
+            var match = Array.prototype.find.call(product.options, function (opt) {
+                return opt.value.toLowerCase() === preset.toLowerCase();
+            });
+            if (match) product.value = match.value;
+        }
+        contactForm.addEventListener('submit', function () {
+            var mailSubject = contactForm.querySelector('#mail-subject');
+            var subject = contactForm.querySelector('[name="subject"]');
+            if (!mailSubject || !product) return;
+            var parts = ['AinzApp'];
+            if (product.value) parts.push(product.value);
+            if (subject && subject.value) parts.push(subject.value);
+            mailSubject.value = parts.join(' — ');
+        });
+    }
 });
