@@ -828,6 +828,10 @@ nav { padding: 0; }
     background: var(--white);
 }
 
+.form-group select {
+    cursor: pointer;
+}
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {

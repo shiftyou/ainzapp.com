@@ -98,4 +98,26 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    var contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        var product = contactForm.querySelector('[name="product"]');
+        var params = new URLSearchParams(window.location.search);
+        var preset = params.get('product');
+        if (product && preset) {
+            var match = Array.prototype.find.call(product.options, function (opt) {
+                return opt.value.toLowerCase() === preset.toLowerCase();
+            });
+            if (match) product.value = match.value;
+        }
+        contactForm.addEventListener('submit', function () {
+            var mailSubject = contactForm.querySelector('#mail-subject');
+            var subject = contactForm.querySelector('[name="subject"]');
+            if (!mailSubject || !product) return;
+            var parts = ['AinzApp'];
+            if (product.value) parts.push(product.value);
+            if (subject && subject.value) parts.push(subject.value);
+            mailSubject.value = parts.join(' — ');
+        });
+    }
 });
